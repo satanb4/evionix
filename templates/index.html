@@ -261,7 +261,7 @@
 
 		<div class="row blog-content">
 			<div class="bricks-wrapper">
-				<!-- {% for articles in article %} -->
+				{% for articles in article %}
 
 				<div class="brick blog-item post animate-this">
 					<span class="date">{{articles.date}}</span>
@@ -269,19 +269,7 @@
 					<p>{{articles.body[:150]+"..."}}</p>
 					<p class="author"><img src="{{articles.image}}" alt="No Image Found"> <cite> {{articles.author}}</cite></p>
 				</div>
-				<div class="brick blog-item post animate-this">
-					<span class="date">{{articles.date}}</span>
-					<h3><a href="articles/{{articles.id}}">{{articles.title[:40]}}</a></h3>
-					<p>{{articles.body[:150]+"..."}}</p>
-					<p class="author"><img src="{{articles.image}}" alt="No Image Found"> <cite> {{articles.author}}</cite></p>
-				</div>
-				<div class="brick blog-item post animate-this">
-					<span class="date">{{articles.date}}</span>
-					<h3><a href="articles/{{articles.id}}">{{articles.title[:40]}}</a></h3>
-					<p>{{articles.body[:150]+"..."}}</p>
-					<p class="author"><img src="{{articles.image}}" alt="No Image Found"> <cite> {{articles.author}}</cite></p>
-				</div>
-				<!-- {% endfor %} -->
+				{% endfor %}
 			</div>
 		</div>
 
