@@ -25,6 +25,9 @@ html {
     #blog .bricks-wrapper .brick {
         width: 90vw;
     }
+    #blog a.fonti{
+        font: Arial, Helvetica, sans-serif;
+    }
 }
 
 @media only screen and (max-width: 1024px) {

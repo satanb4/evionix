@@ -20,13 +20,10 @@ def contact():
 
 @app.route("/articles/<int:id>/")
 def article(id):
-    try: 
-        return render_template("article.html", id = id, article=Articles[id-1])
-    except Exception:
-        return None 
-
-
-
+    # try: 
+    return render_template("article.html", id = id, article=Articles[id-1] , a = Articles)
+    # except Exception:
+    #     return "404" 
 
 
 if __name__ == "__main__":

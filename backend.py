@@ -10,7 +10,8 @@ def articles():
                     In the long run, We aim to create a niche specialized technical company that caters to creating human robotics at a lower cost and adapted to the Indian environment. As a venture, we envision to create a budding sector of the industry which reaches out to all over India and provides industrial robotics aids for the human body.
                     """,
             'date': '19-July-2018',
-            'image': '/static/images/avatars/user-05.jpg'
+            'image': '/static/images/avatars/user-05.jpg',
+            'cover': '/static/images/pointing_gloss.jpg'
         },
         {
             'id':2,
@@ -30,7 +31,13 @@ def articles():
 
                     """,
             'date':'21-Sept-2018',
-            'image': '/static/images/avatars/user-06.jpg'
+            'image': '/static/images/avatars/user-06.jpg',
+            'cover': '/static/images/holding.jpg'
         }
     ]
     return articles
+
+form = {}
+def add_form(name,mail,subject,message):
+    form[name] = [mail,subject,message]
+    return True
