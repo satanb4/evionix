@@ -5,18 +5,25 @@ Articles = articles()
 
 app = Flask(__name__, static_url_path="/static")
 
-@app.route("/", methods = ["GET","POST"])
+@app.route("/")
 def home():
+    return render_template("index.html", article=Articles)
+
+@app.route("/form1", methods = ['POST'])
+def contact():
     if request.method == 'POST':
         name = request.form.get("contactName")
         mail = request.form.get("contactEmail")
         subject = request.form.get("contactSubject")
         message = request.form.get("contactMessage")
-    return render_template("index.html", article=Articles)
+    return redirect(url_for("home"))
 
-@app.route("/form", methods = ['GET','POST'])
-def contact():
-    return None
+@app.route("/notify", methods=["POST"])
+def mail():
+    if request.method == "POST":
+        name = request.form.get("dEmail")
+    return redirect(url_for("home"))
+
 
 @app.route("/articles/<int:id>/")
 def article(id):
