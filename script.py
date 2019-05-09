@@ -1,5 +1,6 @@
 from flask import Flask,request,url_for,render_template,redirect
 from backend import articles
+from forms import LoginForm
 
 Articles = articles()
 
@@ -24,6 +25,14 @@ def mail():
         name = request.form.get("dEmail")
     return redirect(url_for("home"))
 
+@app.route("/login")
+def login():
+    form = LoginForm()
+    if form.validate_on_submit():
+        flash('Login requested for user {}, remember_me={}'.format(
+            form.username.data,form.remember_me.data
+        ))
+    return render_template("login.html")
 
 @app.route("/articles/<int:id>/")
 def article(id):

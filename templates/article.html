@@ -1,23 +1,6 @@
-<!DOCTYPE html>
-<html lang="en">
+{% extends "layout.html" %}
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Evionix</title>
-    <link rel="stylesheet" href="/static/css/art.css">
-    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,700" rel="stylesheet">
-
-</head>
-
-<body>
-    <header>
-        <a href="/">
-            <h1>Evionix | Blog</h1>
-        </a>
-    </header>
-
+{% block body %}
     <div class="outer-container">
         <div class="main-container">
 
@@ -58,71 +41,4 @@
 
         </div>
     </div>
-
-    <div class="back-container">
-        <div class="back-button">
-            <a href="/">BACK HOME</a>
-            <div></div>
-        </div>
-    </div>
-
-    <footer>
-        <div class="footer-main">
-
-            <div class="row">
-
-                <div class="col-five tab-full footer-about">
-
-                    <h4 class="h05">Evionix</h4>
-
-                    <p>We are constantly striving to reach out to as many people as we can at a time. This requires you
-                        as a part of
-                        our small team to make us known to the people who really need us.</p>
-
-                </div> <!-- end footer-about -->
-
-                <div class="col-three tab-full footer-social">
-
-                    <h4 class="h05">Follow Us.</h4>
-
-                    <ul class="list-links">
-                        <li><a href="https://www.facebook.com/evionix/" target="_blank">Facebook</a></li>
-                        <li><a href="#">Twitter</a></li>
-                        <li><a href="#">Instagram</a></li>
-                    </ul>
-
-                </div> <!-- end footer-social -->
-
-                <div class="col-four tab-full footer-subscribe end">
-
-                    <h4 class="h05">Get Notified.</h4>
-
-                    <p>Make sure to follow us to know more about our innovations and what's cooking in our lab</p>
-
-                    <div class="subscribe-form">
-
-                        <form id="mc-form" class="group" novalidate="true" action="/notify">
-
-                            <input type="email" value="" name="dEmail" class="email" id="mc-email" placeholder="type email"
-                                required="">
-
-                            <!-- <input type="submit" name="subscribe" > -->
-                            <button><i class="icon-mail"></i></button>
-
-                            <label for="mc-email" class="subscribe-message"></label>
-
-                        </form>
-
-                    </div>
-
-                </div> <!-- end footer-subscribe -->
-
-            </div> <!-- end row -->
-
-        </div> <!-- end footer-main -->
-
-    </footer>
-
-</body>
-
-</html>
+{% endblock %}
