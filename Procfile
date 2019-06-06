@@ -1,1 +1,1 @@
-web: gunicorn script:script
+web: gunicorn evestaging:app
