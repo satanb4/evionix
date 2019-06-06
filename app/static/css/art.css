@@ -266,7 +266,7 @@ a:hover>h5 {
     color: var(--color1);
 
     display: grid;
-    grid-template-columns: 2.9fr 1fr;
+    grid-template-columns: 1fr;
     justify-items: center;
     align-items: center;
 }
@@ -418,7 +418,93 @@ footer a:hover {
     .footer-about,.footer-main,.footer-social{
         margin-bottom: 2rem; 
     }
-    
+}
+.log{
+    /* Gradient name: Royal */
+    background: #141E30;
+    background: -webkit-linear-gradient(to right, #243B55, #141E30);
+    background: linear-gradient(to right, #243B55, #141E30);
 
+
+    /* background: radial-gradient(circle closest-side, #243B55, #141E30); */
+
+    background: radial-gradient(circle farthest-side, #243B55, #141E30);
+    /* margin-left: 3rem;
+    margin-right: 3rem; */
+    padding: 20%;
+}
+.login-form{
+  font-family: Helvetica;
+  padding: 40px;
+  width: 50%;
+  background: #191919;
+  position: relative;
+  box-shadow: 0 0 7px #000428;
+  top:50%;
+  left: 20%;
+  /* transform: translate(-50%,-50%); */
+  margin: auto 10px;
+  text-align: center;
+  overflow: hidden;
 }
 
+.login-form h1{
+    color: white;
+    text-transform: uppercase;
+    font-weight: 500;
+}
+
+.login-form input[type = "text"],.login-form input[type = "password"]{
+    border:0;
+    position: relative;
+    background: none;
+    display: block;
+    margin: 20px auto;
+    text-align: center;
+    border: 2px solid #3498db;
+    padding: 14px 10px;
+    width: 60%;
+    outline: none;
+    color: white;
+    border-radius: 8px;
+    transition: 0.25s;
+}
+
+.login-form input[type = "text"]:focus,.login-form input[type = "password"]:focus{
+    width: 80%;
+    border-color: #2ecc71;
+}
+
+.login-form input[type = "submit"]{
+    border:0;
+    background: none;
+    display: block;
+    margin: 20px auto;
+    text-align: center;
+    border: 2px solid #2ecc71;
+    padding: 14px 40px;
+    outline: none;
+    color: white;
+    border-radius: 8px;
+    transition: 0.25s;
+    cursor: pointer;
+}
+
+.login-form input[type="submit"]:hover{
+    background: #2ecc71;
+}
+.login-form span{
+    text-align: center;
+    margin: 20px auto;
+    color: white;
+    display: block;
+    padding: 3px;
+    border-radius: 10px;
+    width: 40%;
+    border: 2px solid red;
+    font-size: 10px;
+}
+
+.login-form p{
+    color: #FFFFFF;
+}
