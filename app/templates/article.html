@@ -1,0 +1,44 @@
+{% extends "layout.html" %}
+
+{% block body %}
+    <div class="outer-container">
+        <div class="main-container">
+
+            <section class="article-title">
+                <h3>{{article.title}} </h3>
+                    <div class="author">
+                        <a href="/"><img src="{{article.image}}" alt="Article Image"></a>
+                        <p>{{ article.author}}|<br> {{ article.date }} </p>
+                    </div>
+            </section>
+            <div class="empty"></div>
+            <div class=" article-container">
+                <div class="article-image"><img src={{article.cover}} alt="Sorry :("></div>
+                <article>
+                    <p> {{ article.body }}</p>
+                </article>
+            </div>
+
+            <div class="side-container">
+                <aside>
+                    <h4>Other Articles</h4>
+                    <div class="brief">
+                        {% for articles in a %}
+                        <ul>
+                            <li class="other-img">
+                                <a href="/articles/{{articles.id}}"><img src="{{articles.image}}" alt="Article Image"></a>
+                            </li>
+                            <li><a href="/articles/{{articles.id}}">
+                                    <div class="other-image">
+                                        <h5>{{articles.title[:40]}}</h5>
+                                </a></li>
+                        </ul>
+                        {% endfor %}
+                    </div>
+
+                </aside>
+            </div>
+
+        </div>
+    </div>
+{% endblock %}
