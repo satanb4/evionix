@@ -12,7 +12,7 @@ def home():
         mail = request.form.get("contactEmail")
         subject = request.form.get("contactEmail")
         message = request.form.get("contactMessage")
-    return render_template("index.html", article=Articles)
+    return render_template("index1.html", article=Articles)
 
 @app.route("/form", methods = ['GET','POST'])
 def contact():
@@ -21,4 +21,4 @@ def contact():
 
 
 if __name__ == "__main__":
-    app.run(debug=False)
+    app.run(debug=True)
