@@ -8,7 +8,7 @@ Articles = articles()
 @app.route("/")
 @app.route("/home")
 def home():
-    return render_template("index.html", article=Articles)
+    return render_template("index1.html", article=Articles)
 
 @app.route("/form1", methods = ['POST'])
 def contact():

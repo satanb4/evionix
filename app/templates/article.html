@@ -7,7 +7,7 @@
             <section class="article-title">
                 <h3>{{article.title}} </h3>
                     <div class="author">
-                        <a href="/"><img src="{{article.image}}" alt="Article Image"></a>
+                        <a href="{{url_for('home')}}"><img src="{{article.image}}" alt="Article Image"></a>
                         <p>{{ article.author}}|<br> {{ article.date }} </p>
                     </div>
             </section>
