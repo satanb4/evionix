@@ -40,8 +40,3 @@ def article(id):
     return render_template("article.html", id = id, article=Articles[id-1] , a = Articles, place="Blog")
     # except Exception:
     #     return "404" 
-
-# Serve the static files on the /files route
-@app.route('/files/<path:path>', methods=['GET'])
-def files(path):
-    return app.send_static_file(path)
